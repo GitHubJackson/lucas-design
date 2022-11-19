@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Tag } from "antd";
-import styles from "./index.module.less";
+// import styles from "./index.module.less";
+import "./index.css";
 
 const { CheckableTag } = Tag;
 
@@ -57,7 +58,7 @@ export default function TagSelector(props: IProps) {
   }
 
   return (
-    <div className={styles["container"]}>
+    <div className="tag-selector-container">
       <CheckableTag checked={isSelectAll} onChange={() => handleAllTagSelect()}>
         全选
       </CheckableTag>

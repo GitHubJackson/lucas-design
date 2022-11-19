@@ -13,7 +13,8 @@ import {
   DEFAULT_LEFT,
   DEFAULT_TOP,
 } from "./constants";
-import styles from "./index.module.less";
+// import styles from "./index.module.less";
+import "./index.css";
 
 export interface IModalStyle {
   left?: number;
@@ -27,7 +28,7 @@ interface IProps {
   title: string | ReactNode;
   // 右侧插件区域
   plugin?: ReactElement;
-  styleConfig: IModalStyle;
+  styleConfig?: IModalStyle;
   children: ReactElement;
   onclose: () => void;
   onZIndexChange: () => void;
@@ -52,12 +53,12 @@ function FlexiModal(props: IProps) {
   // 模块全屏控制
   // const [isModalFull, setIsModalFull] = useState(false);
 
-  // NOTE 如果已经存在 sense-modal-portal 或指定父容器，则将后续新增的弹框加入这个容器即可
-  let senseModalPortalDOM = document.getElementById("topic-chart-modal-portal");
-  if (!senseModalPortalDOM) {
-    senseModalPortalDOM = document.createElement("div");
-    senseModalPortalDOM.setAttribute("id", "topic-chart-modal-portal");
-    document.body.appendChild(senseModalPortalDOM);
+  // NOTE 如果已经存在 flexi-modal-portal 或指定父容器，则将后续新增的弹框加入这个容器即可
+  let flexiModalPortalDOM = document.getElementById("flexi-modal-portal");
+  if (!flexiModalPortalDOM) {
+    flexiModalPortalDOM = document.createElement("div");
+    flexiModalPortalDOM.setAttribute("id", "flexi-modal-portal");
+    document.body.appendChild(flexiModalPortalDOM);
   }
 
   function handleClose() {
@@ -104,12 +105,12 @@ function FlexiModal(props: IProps) {
 
   return createPortal(
     <Draggable
-      handle=".sense-modal-header"
+      handle=".flexi-modal-header"
       onStop={handleDragStop}
       bounds="parent"
     >
       <div
-        className={styles["container"]}
+        className="flexi-container"
         ref={boxRef}
         style={{ ...modalStyleRef.current }}
         onClick={handleZIndexChange}
@@ -129,21 +130,21 @@ function FlexiModal(props: IProps) {
             backgroundColor: `rgba(102,102,102,${modalStyleRef.current.bgOpacity})`,
           }}
         >
-          <span className={styles["title"]}>{title || "Default"}</span>
+          <span className="flexi-title">{title || "Default"}</span>
           <div
             style={{ flex: 1, height: "100%" }}
-            className="sense-modal-header"
+            className="flexi-modal-header"
             onClick={(e) => e.stopPropagation()}
           ></div>
-          <div className={styles["btns"]}>
+          <div className="flexi-btns">
             {props.plugin}
-            <CloseOutlined className={styles["icon"]} onClick={handleClose} />
+            <CloseOutlined onClick={handleClose} />
           </div>
         </header>
-        {children}
+        {children || <div className="flexi-empty"></div>}
       </div>
     </Draggable>,
-    senseModalPortalDOM
+    flexiModalPortalDOM
   );
 }
 

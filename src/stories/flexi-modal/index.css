@@ -1,23 +1,28 @@
-:global {
-  #topic-chart-modal-portal {
-    position: absolute;
-    // NOTE 需要结合其他顶层绝对布局的组件来排层级，防止显示异常
-    z-index: 500;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-  }
+#flexi-modal-portal {
+  position: absolute;
+  /* 需要结合其他顶层绝对布局的组件来排层级，防止显示异常 */
+  z-index: 500;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
 }
-.container {
+
+.flexi-empty {
+  min-width: 500px;
+  min-height: 300px;
+  background-color: #ccc;
+}
+
+.flexi-container {
   position: absolute;
   z-index: 1;
   min-width: 500px;
   pointer-events: auto;
 }
 
-.container header {
+.flexi-container header {
   position: absolute;
   height: 36px;
   width: 100%;
@@ -34,27 +39,23 @@
   border-radius: 2px 2px 0 0;
 }
 
-.title {
+.flexi-title {
   font-size: 16px;
 }
 
-.btns {
+.flexi-btns {
   display: flex;
   align-items: center;
   gap: 8px;
   font-size: 16px;
-
-  & > span {
-    cursor: pointer;
-    padding: 4px;
-  }
 }
 
-.icon:hover {
-  /* font-size: 18px; */
+.flexi-btns > span {
+  cursor: pointer;
+  padding: 4px;
 }
 
-.content {
+.flexi-content {
   margin-top: 36px;
   height: calc(100% - 36px);
 }

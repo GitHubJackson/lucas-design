@@ -1,0 +1,8 @@
+.tag-selector-container {
+  line-height: 32px;
+}
+
+.tag-selector-container .ant-tag {
+  font-size: 14px;
+  padding: 2px 8px;
+}
