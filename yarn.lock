@@ -1780,10 +1780,10 @@
   resolved "https://registry.npmmirror.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz#b2ac626d6cb9c8718ab459166d4bb405b8ffa78b"
   integrity sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==
 
-"@lucascv/box-resizer@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.npmmirror.com/@lucascv/box-resizer/-/box-resizer-1.0.6.tgz#03d0a914e3ab628f808a43342247013c13822b42"
-  integrity sha512-9LoNZ3SgM1vNKQ0oJTEPDoqeJaUlnP28CvMJVGJukscuhNaNWz7Z64lUtejT6GUvC3ECad9djYQXKuy3SS9kVw==
+"@lucascv/box-resizer@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.npmjs.org/@lucascv/box-resizer/-/box-resizer-1.0.8.tgz#a6d3db098028ee3c8341f58931aeccadbeefd173"
+  integrity sha512-8hr2qw8+2UkEYwiPBvdwB7uDiX+AyH+25UJPquYvNAN45IR+HYzNAXI2VaceR04u1c6v7QQy35vX40CUKMp/oA==
   dependencies:
     classnames "^2.3.2"
 

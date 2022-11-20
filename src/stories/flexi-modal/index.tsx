@@ -22,6 +22,7 @@ export interface IModalStyle {
   width?: number;
   height?: number;
   opacity?: number;
+  backgroundColor?: string;
 }
 
 interface IProps {
@@ -141,7 +142,7 @@ function FlexiModal(props: IProps) {
             <CloseOutlined onClick={handleClose} />
           </div>
         </header>
-        {children || <div className="flexi-empty"></div>}
+        {children}
       </div>
     </Draggable>,
     flexiModalPortalDOM
