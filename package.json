@@ -12,7 +12,8 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "build-pkg": "NODE_ENV=production rollup -c --bundleConfigAsCjs",
-    "build": "rm -rf lib && json -I -f package.json -e 'this.private=false' && yarn build-pkg && json -I -f package.json -e 'this.private=true'"
+    "build": "rm -rf lib &&  && yarn build-pkg",
+    "publish-pkg": "json -I -f package.json -e 'this.private=false' && npm publish --access=public && json -I -f package.json -e 'this.private=true'"
   },
   "dependencies": {
     "@lucascv/box-resizer": "^1.0.8",

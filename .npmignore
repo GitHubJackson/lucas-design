@@ -1,3 +1,4 @@
 .storybook
 src
 node_modules
+storybook-static
