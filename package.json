@@ -6,13 +6,13 @@
   "module": "lib/main.js",
   "types": "lib/main.d.ts",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "start": "start-storybook -p 6006 -s public",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "build-pkg": "NODE_ENV=production rollup -c --bundleConfigAsCjs"
+    "build-pkg": "NODE_ENV=production rollup -c --bundleConfigAsCjs",
+    "build": "rm -rf lib && json -I -f package.json -e 'this.private=false' && yarn build-pkg && json -I -f package.json -e 'this.private=true'"
   },
   "dependencies": {
     "@lucascv/box-resizer": "^1.0.8",
@@ -24,12 +24,14 @@
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "antd": "^4.24.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "react-draggable": "^4.4.5",
     "react-scripts": "5.0.1",
     "typescript": "^4.8.4",
     "web-vitals": "^2.1.4"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
   },
   "eslintConfig": {
     "extends": [
@@ -74,6 +76,7 @@
     "@storybook/react": "^6.5.13",
     "@storybook/testing-library": "^0.0.13",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "json": "^11.0.0",
     "less": "^4.1.3",
     "postcss": "^8.4.19",
     "prop-types": "^15.8.1",
@@ -83,6 +86,8 @@
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-typescript2": "^0.34.1",
     "rollup-plugin-uglify": "^6.0.4",
-    "webpack": "^5.75.0"
+    "webpack": "^5.75.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
