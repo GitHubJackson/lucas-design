@@ -14,9 +14,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "declaration": true /* 生成相关的 '.d.ts' 文件。 */,
-    "declarationDir": "./lib" /* '.d.ts' 文件输出目录 */
+    "jsx": "react-jsx"
   },
   "include": ["src"]
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import FlexiModal from ".";
+import { FlexiModal } from "../components";
 
 export default {
   title: "Example/FlexiModal",

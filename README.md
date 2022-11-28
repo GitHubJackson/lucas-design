@@ -11,7 +11,6 @@
 
 ## TODO
 
-- [ ] box-resizer
 - [ ] waterfall-box。瀑布流组件
 - [ ] tag-marker。标签选择组件，用于快速打 tag
 

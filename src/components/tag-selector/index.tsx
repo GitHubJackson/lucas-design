@@ -7,7 +7,7 @@ const { CheckableTag } = Tag;
 
 interface IProps {
   tags: string[];
-  defaultValue: string[];
+  defaultValue?: string[];
   onChange?: (selectedTags: string[], tags: string[]) => {};
 }
 
