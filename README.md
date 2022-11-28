@@ -9,6 +9,12 @@
 - `TagSelector`。基于 antd Tag 组件的上层封装，自带全选功能
 - `FlexiModal`。灵活的弹框，支持拖拽调整位置，可从多个方向调整自身宽高。支持存放自定义内容
 
+## 基本使用
+```
+yarn add @lucascv/design;
+import { TagSelector, FlexiModal } from '@lucascv/design';
+```
+
 ## TODO
 
 - [ ] waterfall-box。瀑布流组件
